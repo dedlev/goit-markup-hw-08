@@ -1,0 +1,12 @@
+@mixin fonts($pd, $fw, $lh, $ls) {
+  padding: $pd;
+  font-weight: $fw;
+  line-height: $lh;
+  letter-spacing: $ls;
+}
+
+@mixin colors($cl, $bg, $bsw) {
+  color: $cl;
+  background-color: $bg;
+  box-shadow: $bsw;
+}

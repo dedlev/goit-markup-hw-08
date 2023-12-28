@@ -1,0 +1,114 @@
+/*  hero  button  */
+
+.hero-btn {
+  @extend .btn;
+  @include fonts(10px 32px, 700, 1.87, 0.96px);
+  @include colors(
+    var(--primary-white-color),
+    var(--accent-color),
+    0px 4px 4px 0px rgba(0, 0, 0, 0.15)
+  );
+  transition: background-color 250ms var(--timing-function),
+    color 250ms var(--timing-function);
+
+  &:hover,
+  &:focus {
+    @include colors(
+      #2f303a,
+      var(--primary-white-color),
+      0px 4px 4px 0px rgba(0, 0, 0, 0.15)
+    );
+  }
+}
+
+/*  submit button  */
+
+.submit-btn {
+  @extend .btn;
+  @include fonts(10px 52px, 700, 1.87, 0.96px);
+  @include colors(
+    var(--primary-white-color),
+    var(--accent-color),
+    0px 4px 4px 0px rgba(0, 0, 0, 0.15)
+  );
+  transition: background-color 250ms var(--timing-function),
+    color 250ms var(--timing-function);
+
+  &:hover,
+  &:focus {
+    background-color: #188ce8;
+  }
+}
+
+/*  futer button  */
+
+.subscribe-btn {
+  display: flex;
+  @extend .btn;
+  @include fonts(10px 28px, 700, 1.87, 0.96px);
+  @include colors(
+    var(--primary-white-color),
+    var(--accent-color),
+    0px 4px 4px 0px rgba(0, 0, 0, 0.15)
+  );
+
+  &__text {
+    padding-left: 5px;
+  }
+
+  &__icon {
+    margin-left: 10px;
+    align-items: center;
+
+    fill: var(--primary-white-color);
+  }
+}
+
+/*  portfolio button  */
+
+.portfolio-btn {
+  @extend .btn;
+  @include fonts(6px 22px, 500, 1.62, 0.48px);
+  @include colors(var(--title-text-color), #f5f4fa, none);
+
+  transition: color 250ms var(--timing-function),
+    background-color 250ms var(--timing-function),
+    box-shadow 250ms var(--timing-function);
+
+  &:hover,
+  &:focus {
+    @include colors(
+      var(--primary-white-color),
+      var(--accent-color),
+      (
+        0px 2px 2px 0px rgba(0, 0, 0, 0.12),
+        0px 1px 2px 0px rgba(0, 0, 0, 0.08),
+        0px 3px 1px 0px rgba(0, 0, 0, 0.1)
+      )
+    );
+  }
+
+  &__item:not(:first-child) {
+    margin-left: 8px;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+}
+
+.portfolio-btn--current {
+  padding: 6px 25px;
+  @include colors(
+    var(--primary-white-color),
+    var(--accent-color),
+    (
+      0px 2px 2px 0px rgba(0, 0, 0, 0.12),
+      0px 1px 2px 0px rgba(0, 0, 0, 0.08),
+      0px 3px 1px 0px rgba(0, 0, 0, 0.1)
+    )
+  );
+}

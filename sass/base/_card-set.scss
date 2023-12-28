@@ -1,0 +1,38 @@
+/* сітка для колекції з елементів */
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: var(--indent);
+}
+
+.grid-item {
+  flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
+}
+
+// advantages
+
+.advantages-list .item {
+  --items: 4;
+}
+
+// directions
+
+.direction-list .item {
+  --items: 3;
+}
+
+// team
+
+.team .item {
+  --items: 4;
+}
+
+// portfolio
+
+.portfolio-direction {
+  --items: 3;
+
+  background: var(--primary-white-color);
+}

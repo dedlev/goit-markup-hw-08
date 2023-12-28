@@ -1,0 +1,33 @@
+/*  contacts  */
+
+.contacts {
+  display: flex;
+  align-items: center;
+
+  &__item:not(:first-child) {
+    margin-left: 50px;
+  }
+
+  &__icon {
+    fill: currentColor;
+    margin-right: 10px;
+  }
+}
+
+.contacts__link {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.28px;
+
+  color: var(--primary-text-color);
+
+  transition: color 250ms var(--timing-function);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
