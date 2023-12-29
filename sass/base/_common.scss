@@ -12,8 +12,15 @@ body {
 /* section */
 
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  @include mq(mobile) {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+
+  @include mq(desctop) {
+    margin-top: 94px;
+    margin-bottom: 94px;
+  }
 
   &__title {
     margin-top: 0;

@@ -50,8 +50,22 @@ body {
 
 /* section */
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  margin-top: 94px;
+  margin-bottom: 94px;
+}
+@media screen and (min-width: 480px) {
+  .section {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .section {
+    margin-top: 94px;
+    margin-bottom: 94px;
+  }
 }
 .section__title {
   margin-top: 0;
@@ -91,46 +105,28 @@ p {
 
 /* container */
 .container {
-  width: 1200px;
   padding-right: 15px;
   padding-left: 15px;
   margin-left: auto;
   margin-right: auto;
-  /*  outline: 1px solid tomato; */
+}
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
 }
 
 /* сітка для колекції з елементів */
-.grid {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  gap: var(--indent);
-}
-
-.grid-item {
-  -ms-flex-preferred-size: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
-      flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
-}
-
-.advantages-list .item {
-  --items: 4;
-}
-
-.direction-list .item {
-  --items: 3;
-}
-
-.team .item {
-  --items: 4;
-}
-
-.portfolio-direction {
-  --items: 3;
-  background: var(--primary-white-color);
-}
-
 /* page-header */
 .main-nav {
   display: -webkit-box;
@@ -700,24 +696,46 @@ p {
 }
 
 /*  advantages  */
-.advantages {
-  padding-bottom: 0;
+.advantages-list {
+  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: -15px;
 }
-.advantages__title {
+@media screen and (max-width: 767.98px) {
+  .advantages-list {
+    display: block;
+  }
+}
+@media screen and (min-width: 768px) {
+  .advantages-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+.advantages-list__title {
   margin-top: 0;
   margin-bottom: 10px;
   font-size: 14px;
   line-height: 1.2;
   letter-spacing: 0.42px;
+  text-align: center;
+  text-align: left;
   color: var(--title-text-color);
   text-transform: uppercase;
 }
-.advantages__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+@media screen and (max-width: 767.98px) {
+  .advantages-list__title {
+    text-align: center;
+  }
 }
-.advantages__image {
+.advantages-list__image {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -733,16 +751,56 @@ p {
   background: #f5f4fa;
   margin-bottom: 30px;
 }
-
-.advantages__item {
-  -ms-flex-preferred-size: calc((100% - 90px) / 4);
-      flex-basis: calc((100% - 90px) / 4);
+@media screen and (min-width: 768px) {
+  .advantages-list__image {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
-.advantages__item:not(:first-child) {
-  margin-left: 30px;
+
+.advantages-list__item {
+  margin: 15px 15px 30px;
+  -ms-flex-preferred-size: calc((100% - 60px) / 2);
+      flex-basis: calc((100% - 60px) / 2);
+  margin: 0 15px 30px;
+  -ms-flex-preferred-size: calc((100% - 120px) / 4);
+      flex-basis: calc((100% - 120px) / 4);
+}
+@media screen and (min-width: 480px) {
+  .advantages-list__item {
+    margin: 15px 15px 30px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .advantages-list__item {
+    -ms-flex-preferred-size: calc((100% - 60px) / 2);
+        flex-basis: calc((100% - 60px) / 2);
+    margin: 0 15px 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .advantages-list__item {
+    -ms-flex-preferred-size: calc((100% - 120px) / 4);
+        flex-basis: calc((100% - 120px) / 4);
+  }
 }
 
 /* напрямки діяльності */
+.directions {
+  display: none;
+  display: block;
+}
+@media screen and (min-width: 480px) {
+  .directions {
+    display: none;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .directions {
+    display: block;
+  }
+}
 .directions__list {
   display: -webkit-box;
   display: -ms-flexbox;

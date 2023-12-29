@@ -1,5 +1,11 @@
 /* напрямки діяльності */
 .directions {
+  @include mq(mobile) {
+    display: none;
+  }
+  @include mq(desctop) {
+    display: block;
+  }
   &__list {
     display: flex;
   }
