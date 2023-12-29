@@ -50,6 +50,7 @@ body {
 
 /* section */
 .section {
+  outline: 1px solid tomato;
   margin-top: 60px;
   margin-bottom: 60px;
   margin-top: 94px;
@@ -68,6 +69,7 @@ body {
   }
 }
 .section__title {
+  margin-bottom: 30px;
   margin-top: 0;
   margin-bottom: 50px;
   text-align: center;
@@ -76,6 +78,30 @@ body {
   line-height: 1.2;
   letter-spacing: 1.08px;
   color: var(--title-text-color);
+}
+@media screen and (min-width: 480px) {
+  .section__title {
+    margin-bottom: 30px;
+  }
+}
+
+.section__title--distance {
+  padding-top: 60px;
+  margin-bottom: 30px;
+  padding-top: 94px;
+  margin-bottom: 60px;
+}
+@media screen and (min-width: 480px) {
+  .section__title--distance {
+    padding-top: 60px;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .section__title--distance {
+    padding-top: 94px;
+    margin-bottom: 60px;
+  }
 }
 
 /* reset */
@@ -697,13 +723,13 @@ p {
 
 /*  advantages  */
 .advantages-list {
+  margin: 0 -15px;
   display: block;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin: -15px;
 }
 @media screen and (max-width: 767.98px) {
   .advantages-list {
@@ -778,6 +804,12 @@ p {
         flex-basis: calc((100% - 60px) / 2);
     margin: 0 15px 30px;
   }
+  .advantages-list__item:nth-last-child(-n+2) {
+    margin: 0 15px;
+  }
+}
+.advantages-list__item:nth-last-child(-n+2) {
+  margin: 0 15px;
 }
 @media screen and (min-width: 1200px) {
   .advantages-list__item {
@@ -787,20 +819,21 @@ p {
 }
 
 /* напрямки діяльності */
-.directions {
+.section-directions {
   display: none;
   display: block;
 }
 @media screen and (min-width: 480px) {
-  .directions {
+  .section-directions {
     display: none;
   }
 }
 @media screen and (min-width: 1200px) {
-  .directions {
+  .section-directions {
     display: block;
   }
 }
+
 .directions__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -832,27 +865,88 @@ p {
 .team {
   background-color: #f5f4fa;
 }
+
 .team__list {
+  margin: 0 -15px;
+}
+.team__list {
+  display: block;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+@media screen and (max-width: 767.98px) {
+  .team__list {
+    display: block;
+  }
+}
+@media screen and (min-width: 768px) {
+  .team__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 }
 
 .team__member {
-  -ms-flex-preferred-size: calc((100% - 90px) / 4);
-      flex-basis: calc((100% - 90px) / 4);
+  width: 450px;
+  margin-bottom: 30px;
+  -ms-flex-preferred-size: calc((100% - 60px) / 2);
+      flex-basis: calc((100% - 60px) / 2);
+  margin: 0 15px 30px;
+  -ms-flex-preferred-size: calc((100% - 120px) / 4);
+      flex-basis: calc((100% - 120px) / 4);
+  margin: 0 15px;
   border-radius: 0px 0px 4px 4px;
   -webkit-box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
           box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
   background: var(--primary-white-color);
 }
-.team__member:not(:first-child) {
-  margin-left: 30px;
+@media screen and (min-width: 480px) {
+  .team__member {
+    width: 450px;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .team__member {
+    -ms-flex-preferred-size: calc((100% - 60px) / 2);
+        flex-basis: calc((100% - 60px) / 2);
+    margin: 0 15px 30px;
+  }
+  .team__member:nth-last-child(-n+2) {
+    margin: 0 15px;
+  }
+}
+.team__member:nth-last-child(-n+2) {
+  margin: 0 15px;
+}
+@media screen and (min-width: 1200px) {
+  .team__member {
+    -ms-flex-preferred-size: calc((100% - 120px) / 4);
+        flex-basis: calc((100% - 120px) / 4);
+    margin: 0 15px;
+  }
 }
 
 .member__group {
   padding-top: 30px;
+  padding-bottom: 24px;
   padding-bottom: 30px;
+}
+@media screen and (min-width: 768px) {
+  .member__group {
+    padding-bottom: 24px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .member__group {
+    padding-bottom: 30px;
+  }
 }
 .member__title {
   margin-top: 0;
