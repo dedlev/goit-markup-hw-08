@@ -7,15 +7,6 @@
   background-color: #2f303a;
   color: var(--primary-white-color);
 
-  &__container {
-    display: flex;
-    align-items: baseline;
-  }
-
-  &__address {
-    width: 231px;
-  }
-
   &__title {
     display: block;
     margin-top: 0;
@@ -27,12 +18,73 @@
     text-transform: uppercase;
 
     color: #fff;
+
+    @include mq(mobile) {
+      text-align: center;
+    }
+  }
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+
+  @include mq(mobile) {
+    direction: column;
+  }
+}
+
+.footer-address {
+  display: flex;
+  flex-wrap: wrap;
+  width: 231px;
+  margin-bottom: 60px;
+
+  @include mq(mobile) {
+    margin: 0 auto;
+  }
+
+  @include mq(desctop) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.footer-coords {
+  @include mq(mobile) {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  @include mq(desctop) {
+    margin-left: 0;
   }
 }
 
 .footer-contacts {
+  &__list {
+    @include mq(mobile) {
+      margin-right: auto;
+      margin-left: auto;
+      margin-bottom: 60px;
+    }
+
+    @include mq(desctop) {
+      margin: 0;
+    }
+  }
+
   &__item {
     margin-top: 9px;
+
+    @include mq(mobile) {
+      text-align: center;
+    }
+
+    @include mq(desctop) {
+      text-align: left;
+    }
   }
 
   &__link {
@@ -42,6 +94,24 @@
     color: rgba(255, 255, 255, 0.6);
 
     transition: color 250ms var(--timing-function);
+  }
+}
+
+.footer-socials {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  @include mq(mobile) {
+    width: 276px;
+    margin-bottom: 60px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  @include mq(desctop) {
+    width: 206px;
+    margin: 0 0 0 70px;
   }
 }
 
@@ -56,19 +126,32 @@
 
 .subscribe {
   &__footer {
-    margin-left: 93px;
+    @include mq(mobile) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @include mq(desctop) {
+      margin-left: 93px;
+      margin-right: 0;
+    }
   }
 
   &__items {
     display: flex;
-    align-items: center;
+
+    @include mq(mobile) {
+      flex-direction: column;
+      align-items: center;
+    }
+    @include mq(desctop) {
+      flex-direction: row;
+    }
   }
 
   &__input {
-    width: 358px;
     height: 50px;
     padding: 15px 16px;
-    margin-right: 10px;
     border-radius: 4px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     outline: transparent;
@@ -76,6 +159,18 @@
     background: rgba(33, 150, 243, 0);
 
     transition: outline 250ms var(--timing-function);
+
+    @include mq(mobile) {
+      margin-right: 0;
+      margin-bottom: 20px;
+      width: 450px;
+    }
+
+    @include mq(desctop) {
+      margin-bottom: 0;
+      margin-right: 12px;
+      width: 358px;
+    }
   }
 }
 

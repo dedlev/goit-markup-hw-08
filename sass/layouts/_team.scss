@@ -2,39 +2,37 @@
 
 .team {
   background-color: #f5f4fa;
-}
 
-.team__list {
-  margin: 0 -15px;
-  & {
-    @include mq(mobile-only) {
-      display: block;
-    }
-    @include mq(tablet) {
-      display: flex;
-      flex-wrap: wrap;
-    }
+  @include mq(mobile) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  @include mq(desctop) {
+    padding-top: 94px;
+    padding-bottom: 94px;
   }
 }
 
+.team__list {
+  margin: -15px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .team__member {
+  margin: 15px;
+
   @include mq(mobile) {
-    width: 450px;
-    margin-bottom: 30px;
+    flex-basis: calc((100% - 30px) / 1);
   }
 
   @include mq(tablet) {
     flex-basis: calc((100% - 60px) / 2);
-    margin: 0 15px 30px;
-
-    &:nth-last-child(-n + 2) {
-      margin: 0 15px;
-    }
   }
 
   @include mq(desctop) {
     flex-basis: calc((100% - 120px) / 4);
-    margin: 0 15px;
   }
 
   border-radius: 0px 0px 4px 4px;

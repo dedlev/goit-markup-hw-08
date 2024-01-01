@@ -1,8 +1,9 @@
 /* напрямки діяльності */
 .section-directions {
-  @include mq(mobile) {
+  @media screen and (max-width: (1200px - 0.02)) {
     display: none;
   }
+
   @include mq(desctop) {
     display: block;
   }
