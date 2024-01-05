@@ -88,15 +88,38 @@
     );
   }
 
-  &__item:not(:first-child) {
-    margin-left: 8px;
-  }
+  // &__item:not(:first-child) {
+  //   margin-left: 8px;
+  // }
 
   &__list {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 50px;
+
+    @media screen and (max-width: 767px) {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 328px;
+      justify-content: start;
+    }
+  }
+}
+
+.portfolio-btn__item {
+  &:not(:first-child) {
+    margin-left: 8px;
+  }
+
+  @media screen and (max-width: 767px) {
+    &:nth-child(-n + 3) {
+      margin-bottom: 15px;
+    }
+
+    &:nth-child(4) {
+      margin-left: 0;
+    }
   }
 }
 

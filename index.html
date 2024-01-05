@@ -18,14 +18,40 @@
   <body>
     <!-- Панель навігації -->
 
-    <!-- <header class="page-header">
+    <header class="page-header">
       <div class="container">
-        <div class="main-nav main-nav__container">
-          <nav class="main-nav__navi">
-            <a href="./index.html" class="logo"
-              >Web<span class="logo__text logo__text--black">Studio</span></a
+        <!-- <div class="main-nav main-nav__container"> -->
+        <!-- <nav class="main-nav__navi"> -->
+        <nav class="nav">
+          <a href="./index.html" class="logo"
+            >Web<span class="logo__text logo__text--black">Studio</span></a
+          >
+          <batton
+            type="button"
+            class="menu-button"
+            aria-expanded="false"
+            aria-controls="menu-container"
+            data-menu-button
+          >
+            <svg
+              class="menu-icon"
+              width="40"
+              height="40"
+              aria-label="Перемикач мобільного меню"
             >
-            <div class="site-nav__header">
+              <use
+                class="icon-cross"
+                href="./images/icons.svg#icon-close_40px"
+              ></use>
+              <use
+                class="icon-menu"
+                href="./images/icons.svg#icon-menu_40px"
+              ></use>
+            </svg>
+          </batton>
+
+          <div class="menu-container" id="menu-container" data-menu>
+            <div class="navigation">
               <ul class="site-nav list">
                 <li class="site-nav__item">
                   <a class="site-nav__link site-nav__link--current link" href=""
@@ -42,33 +68,54 @@
                 </li>
               </ul>
             </div>
-          </nav>
-          <ul class="contacts list">
-            <li class="contacts__item">
-              <a class="contacts__link link" href="mailto:info@devstudio.com"
-                ><svg class="contacts__icon" width="16" height="12">
-                  <use href="./images/icons.svg#envelope"></use>
-                </svg>
-                info@devstudio.com</a
-              >
-            </li>
-            <li class="contacts__item">
-              <a class="contacts__link link" href="tel:+38-096-111-11-11"
-                ><svg class="contacts__icon" width="10" height="16">
-                  <use href="./images/icons.svg#smartphone"></use>
-                </svg>
-                +38 096 111 11 11</a
-              >
-            </li>
-          </ul>
-        </div>
+            <div class="navigation__contacts">
+              <ul class="contacts list">
+                <li class="contacts__item">
+                  <a
+                    class="contacts__link contacts__link--size link"
+                    href="mailto:info@devstudio.com"
+                    ><svg class="contacts__icon" width="16" height="12">
+                      <use href="./images/icons.svg#envelope"></use>
+                    </svg>
+                    info@devstudio.com</a
+                  >
+                </li>
+                <li class="contacts__item">
+                  <a class="contacts__link link" href="tel:+38-096-111-11-11"
+                    ><svg class="contacts__icon" width="10" height="16">
+                      <use href="./images/icons.svg#smartphone"></use>
+                    </svg>
+                    +38 096 111 11 11</a
+                  >
+                </li>
+              </ul>
+
+              <div class="menu-socials">
+                <ul class="menu-socials__list list">
+                  <li class="menu-socials__item item">
+                    <a href="" class="link"></a>Instagram
+                  </li>
+                  <li class="menu-socials__item item">
+                    <a href="" class="link"></a>Twitter
+                  </li>
+                  <li class="menu-socials__item item">
+                    <a href="" class="link"></a>Facebook
+                  </li>
+                  <li class="menu-socials__item item">
+                    <a href="" class="link"></a>LinkedIn
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
       </div>
-    </header> -->
+    </header>
 
     <!-- Головна сторінка -->
     <main>
       <!-- Герой -->
-      <!-- <section class="hero">
+      <section class="hero">
         <div class="overlay">
           <div class="hero__container container">
             <h1 class="hero__title">Ефективні рішення для вашого бізнесу</h1>
@@ -86,10 +133,10 @@
                   <form class="modal-form">
                     <b class="modal-form__title"
                       >Залиште свої дані, ми вам передзвонимо</b
-                    > -->
-      <!-- дані відвідувача -->
+                    >
+                    <!-- дані відвідувача -->
 
-      <!-- <label class="modal-form__group">
+                    <label class="modal-form__group">
                       <span class="modal-form__label">Ім'я</span>
                       <input
                         class="modal-form__input"
@@ -133,22 +180,26 @@
                         rows="7"
                         placeholder="Введіть текст"
                       ></textarea>
-                    </label> -->
+                    </label>
 
-      <!-- політика прватності -->
+                    <!-- політика прватності -->
 
-      <!-- <div class="modal-form__policy">
+                    <div class="modal-form__policy">
                       <label class="modal-form__policy-label">
                         <input
                           class="modal-form__checkbox visually-hidden"
                           type="checkbox"
-                        /> -->
+                        />
 
-      <!-- <svg class="modal-form__checkbox-vector" width="16" height="15">
+                        <!-- <svg
+                          class="modal-form__checkbox-vector"
+                          width="16"
+                          height="15"
+                        >
                           <use href="./images/icons.svg#icon-Vector"></use>
                         </svg> -->
 
-      <!-- <span class="modal-form__heckbox-custom"></span>
+                        <span class="modal-form__heckbox-custom"></span>
 
                         <svg
                           class="modal-form__checkbox-check"
@@ -174,7 +225,7 @@
             </div>
           </div>
         </div>
-      </section> -->
+      </section>
 
       <!-- Переваги -->
       <section class="section">
@@ -756,5 +807,6 @@
       </div>
     </footer>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

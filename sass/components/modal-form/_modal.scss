@@ -1,11 +1,11 @@
 .backdrop {
   position: fixed;
   top: 0;
-  left: 50%;
-  width: 100%;
+  left: 0;
+  width: 100vw;
   height: 100%;
-
-  transform: translatex(-50%);
+  padding: 93px 15px 15px;
+  overflow-y: scroll;
 
   opacity: 1;
   transition: opacity 250ms var(--timing-function);
@@ -21,7 +21,19 @@
 /* modal */
 
 .modal {
-  position: absolute;
+  @media screen and (max-width: 1199px) {
+    position: static;
+    left: 0;
+    width: 450px;
+    top: 93px;
+    transform: translate(0, 0);
+  }
+
+  @include mq(tablet) {
+    position: absolute;
+    // top: 93px;
+  }
+
   left: 50%;
   top: 222px;
   width: 528px;
@@ -31,7 +43,9 @@
 
   background-color: var(--primary-white-color);
 
-  transform: translate(-50%, 0) scale(1);
+  @include mq(tablet) {
+    transform: translate(-50%, -50px) scale(1);
+  }
 
   transition: transform 250ms var(--timing-function);
 }

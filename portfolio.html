@@ -16,20 +16,48 @@
   </head>
 
   <body>
-    <header class="header">
+    <header class="page-header">
       <div class="container">
-        <div class="main-nav main-nav__container">
-          <nav class="main-nav__navi">
-            <a href="./index.html" class="logo"
-              >Web<span class="logo__text logo__text--black">Studio</span></a
+        <!-- <div class="main-nav main-nav__container"> -->
+        <!-- <nav class="main-nav__navi"> -->
+        <nav class="nav">
+          <a href="./index.html" class="logo"
+            >Web<span class="logo__text logo__text--black">Studio</span></a
+          >
+          <batton
+            type="button"
+            class="menu-button"
+            aria-expanded="false"
+            aria-controls="menu-container"
+            data-menu-button
+          >
+            <svg
+              class="menu-icon"
+              width="40"
+              height="40"
+              aria-label="Перемикач мобільного меню"
             >
-            <div class="site-nav__header">
+              <use
+                class="icon-cross"
+                href="./images/icons.svg#icon-close_40px"
+              ></use>
+              <use
+                class="icon-menu"
+                href="./images/icons.svg#icon-menu_40px"
+              ></use>
+            </svg>
+          </batton>
+
+          <div class="menu-container" id="menu-container" data-menu>
+            <div class="navigation">
               <ul class="site-nav list">
                 <li class="site-nav__item">
                   <a class="site-nav__link link" href="./index.html">Студія</a>
                 </li>
                 <li class="site-nav__item">
-                  <a class="site-nav__link site-nav__link--current link" href=""
+                  <a
+                    class="site-nav__link site-nav__link--current link"
+                    href="./portfolio.html"
                     >Портфоліо</a
                   >
                 </li>
@@ -38,26 +66,47 @@
                 </li>
               </ul>
             </div>
-          </nav>
-          <ul class="contacts list">
-            <li class="contacts__item">
-              <a class="contacts__link link" href="mailto:info@devstudio.com"
-                ><svg class="contacts__icon" width="16" height="12">
-                  <use href="./images/icons.svg#envelope"></use>
-                </svg>
-                info@devstudio.com</a
-              >
-            </li>
-            <li class="contacts__item">
-              <a class="contacts__link link" href="tel:+38-096-111-11-11"
-                ><svg class="contacts__icon" width="10" height="16">
-                  <use href="./images/icons.svg#smartphone"></use>
-                </svg>
-                +38 096 111 11 11</a
-              >
-            </li>
-          </ul>
-        </div>
+            <div class="navigation__contacts">
+              <ul class="contacts list">
+                <li class="contacts__item">
+                  <a
+                    class="contacts__link contacts__link--size link"
+                    href="mailto:info@devstudio.com"
+                    ><svg class="contacts__icon" width="16" height="12">
+                      <use href="./images/icons.svg#envelope"></use>
+                    </svg>
+                    info@devstudio.com</a
+                  >
+                </li>
+                <li class="contacts__item">
+                  <a class="contacts__link link" href="tel:+38-096-111-11-11"
+                    ><svg class="contacts__icon" width="10" height="16">
+                      <use href="./images/icons.svg#smartphone"></use>
+                    </svg>
+                    +38 096 111 11 11</a
+                  >
+                </li>
+              </ul>
+
+              <div class="menu-socials">
+                <ul class="menu-socials__list list">
+                  <li class="menu-socials__item item">
+                    <a href="" class="link"></a>Instagram
+                  </li>
+                  <li class="menu-socials__item item">
+                    <a href="" class="link"></a>Twitter
+                  </li>
+                  <li class="menu-socials__item item">
+                    <a href="" class="link"></a>Facebook
+                  </li>
+                  <li class="menu-socials__item item">
+                    <a href="" class="link"></a>LinkedIn
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
       </div>
     </header>
 
@@ -322,12 +371,12 @@
     </main>
     <!-- footer -->
     <footer class="footer">
-      <div class="footer__container container">
-        <div class="footer__address">
+      <div class="footer-container container">
+        <div class="footer-address">
           <a href="./index.html" class="logo logo__footer"
             >Web<span class="logo__text logo__text--white">Studio</span></a
           >
-          <p>м. Київ, пр-т Лесі Українки, 26</p>
+          <span class="footer-coords">м. Київ, пр-т Лесі Українки, 26</span>
           <ul class="footer-contacts__list list">
             <li class="footer-contacts__item">
               <a
@@ -419,5 +468,6 @@
         </form>
       </div>
     </footer>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

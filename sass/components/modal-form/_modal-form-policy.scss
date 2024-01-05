@@ -2,28 +2,42 @@
 
 .modal-form__policy {
   justify-content: center;
-  margin-left: 12px;
-  margin-bottom: 30px;
+  margin-left: 0;
+
+  @media screen and (min-width: 1200px) {
+    margin-left: 12px;
+  }
+  margin-bottom: 31px;
 
   &-label {
     position: relative;
     display: flex;
     align-items: center;
-    font-size: 14px;
-    line-height: 1.71;
-    letter-spacing: 0.42px;
+
+    @media screen and (max-width: 1199px) {
+      font-size: 12px;
+      line-height: 1.2;
+      letter-spacing: 0.36px;
+    }
+
+    @include mq(desctop) {
+      font-size: 14px;
+      line-height: 1.71;
+      letter-spacing: 0.42px;
+    }
 
     cursor: pointer;
   }
 
   &-span {
     color: #2196f3;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1.71;
-    letter-spacing: 0.42px;
+
     text-decoration-line: underline;
   }
+}
+
+.form-policy-desc {
+  text-align: left;
 }
 
 .modal-form__heckbox-custom {
@@ -32,6 +46,8 @@
   height: 15px;
   border: 2px solid var(--title-text-color);
   border-radius: 2px;
+
+  color: #212121;
 
   transition: border-color 250ms var(--timing-function);
 
@@ -42,7 +58,6 @@
 
 .modal-form__checkbox-check {
   position: absolute;
-  top: 4px;
   left: 0;
   opacity: 0;
 
