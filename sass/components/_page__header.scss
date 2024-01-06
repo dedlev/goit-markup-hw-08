@@ -5,11 +5,14 @@
 }
 
 .nav {
+  position: relative;
   display: flex;
   align-items: center;
+  border-bottom: 1px solid #ececec;
 
-  @media screen and (max-width: 767px) {
-    justify-content: space-between;
+  @media screen and (max-width: 1199px) {
+    padding-top: 16px;
+    padding-bottom: 16px;
   }
 }
 
@@ -17,10 +20,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  &__container {
-    border-bottom: 1px solid #ececec;
-  }
 
   &__navi {
     display: flex;
