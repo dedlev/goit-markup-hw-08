@@ -21,33 +21,40 @@
 /* modal */
 
 .modal {
-  @media screen and (max-width: 1199px) {
-    position: static;
-    left: 0;
-    width: 450px;
-    top: 93px;
-    transform: translate(0, 0);
-  }
-
-  @include mq(tablet) {
-    position: absolute;
-    // top: 93px;
-  }
-
-  left: 50%;
-  top: 222px;
-  width: 528px;
+  position: relative;
+  // top: 93px;
   border-radius: 4px;
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
     0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 
   background-color: var(--primary-white-color);
 
-  @include mq(tablet) {
-    transform: translate(-50%, -50px) scale(1);
+  transition: transform 250ms var(--timing-function);
+
+  @media screen and (min-width: 360px) {
+    left: 0;
+    width: 99%;
+    top: 93px;
+    transform: translate(0, 0);
   }
 
-  transition: transform 250ms var(--timing-function);
+  @media screen and (min-width: 480px) {
+    // @media screen and (min-width: 480px) and (max-width: 1199px) {
+    position: absolute;
+    top: 93px;
+    left: 50%;
+    width: 100%;
+    max-width: 450px;
+
+    transform: translate(-50%, -50px);
+    // transform: translate(-50%, -50px) scale(1);
+  }
+
+  @media screen and (min-width: 1200px) {
+    // left: 50%;
+    top: 222px;
+    width: 528px;
+  }
 }
 
 /* modal-btn */

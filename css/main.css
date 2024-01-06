@@ -706,14 +706,6 @@ p {
   margin-bottom: 20px;
   margin-right: auto;
   margin-left: auto;
-  margin-left: 0;
-  margin-right: 0;
-}
-@media screen and (min-width: 480px) {
-  .logo__footer {
-    margin-right: auto;
-    margin-left: auto;
-  }
 }
 @media screen and (min-width: 1200px) {
   .logo__footer {
@@ -760,40 +752,40 @@ p {
 
 /* modal */
 .modal {
-  position: absolute;
-  left: 50%;
-  top: 222px;
-  width: 528px;
+  position: relative;
   border-radius: 4px;
   -webkit-box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
           box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
   background-color: var(--primary-white-color);
-  -webkit-transform: translate(-50%, -50px) scale(1);
-          transform: translate(-50%, -50px) scale(1);
   -webkit-transition: -webkit-transform 250ms var(--timing-function);
   transition: -webkit-transform 250ms var(--timing-function);
   transition: transform 250ms var(--timing-function);
   transition: transform 250ms var(--timing-function), -webkit-transform 250ms var(--timing-function);
 }
-@media screen and (max-width: 1199px) {
+@media screen and (min-width: 360px) {
   .modal {
-    position: static;
     left: 0;
-    width: 450px;
+    width: 99%;
     top: 93px;
     -webkit-transform: translate(0, 0);
             transform: translate(0, 0);
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 480px) {
   .modal {
     position: absolute;
+    top: 93px;
+    left: 50%;
+    width: 100%;
+    max-width: 450px;
+    -webkit-transform: translate(-50%, -50px);
+            transform: translate(-50%, -50px);
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .modal {
-    -webkit-transform: translate(-50%, -50px) scale(1);
-            transform: translate(-50%, -50px) scale(1);
+    top: 222px;
+    width: 528px;
   }
 }
 
@@ -1070,14 +1062,45 @@ p {
 .overlay {
   position: relative;
   max-width: 1600px;
-  height: 600px;
+  height: 400px;
   background-repeat: no-repeat;
   margin-left: auto;
   margin-right: auto;
   background-color: #c4c4c4;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(var(--hero-bg-color)), to(var(--hero-bg-color))), url(../images/hero/hero-img.jpg);
-  background-image: linear-gradient(var(--hero-bg-color), var(--hero-bg-color)), url(../images/hero/hero-img.jpg);
+  background-image: url(../images/hero/hero_sm.jpg), -webkit-gradient(linear, left top, left bottom, from(var(--hero-bg-color)), to(var(--hero-bg-color)));
+  background-image: url(../images/hero/hero_sm.jpg), linear-gradient(var(--hero-bg-color), var(--hero-bg-color));
   background-position: center;
+}
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .overlay {
+    background-image: url(../images/hero/hero_sm@2x.jpg), -webkit-gradient(linear, left top, left bottom, from(var(--hero-bg-color)), to(var(--hero-bg-color)));
+    background-image: url(../images/hero/hero_sm@2x.jpg), linear-gradient(var(--hero-bg-color), var(--hero-bg-color));
+  }
+}
+@media screen and (min-width: 768px) {
+  .overlay {
+    background-image: url(../images/hero/hero_md.jpg), -webkit-gradient(linear, left top, left bottom, from(var(--hero-bg-color)), to(var(--hero-bg-color)));
+    background-image: url(../images/hero/hero_md.jpg), linear-gradient(var(--hero-bg-color), var(--hero-bg-color));
+  }
+}
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .overlay {
+    background-image: url(../images/hero/hero_md@2x.jpg), -webkit-gradient(linear, left top, left bottom, from(var(--hero-bg-color)), to(var(--hero-bg-color)));
+    background-image: url(../images/hero/hero_md@2x.jpg), linear-gradient(var(--hero-bg-color), var(--hero-bg-color));
+  }
+}
+@media screen and (min-width: 1200px) {
+  .overlay {
+    height: 600px;
+    background-image: url(../images/hero/hero_lg.jpg), -webkit-gradient(linear, left top, left bottom, from(var(--hero-bg-color)), to(var(--hero-bg-color)));
+    background-image: url(../images/hero/hero_lg.jpg), linear-gradient(var(--hero-bg-color), var(--hero-bg-color));
+  }
+}
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .overlay {
+    background-image: url(../images/hero/hero_lg@2x.jpg), -webkit-gradient(linear, left top, left bottom, from(var(--hero-bg-color)), to(var(--hero-bg-color)));
+    background-image: url(../images/hero/hero_lg@2x.jpg), linear-gradient(var(--hero-bg-color), var(--hero-bg-color));
+  }
 }
 
 /*  advantages  */
@@ -1526,15 +1549,8 @@ clients__link:hover .clients__icon, clients__link:focus .clients__icon {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   width: 231px;
-  margin-bottom: 60px;
-  margin: 0 auto;
-  margin-left: 0;
-  margin-right: 0;
-}
-@media screen and (min-width: 480px) {
-  .footer-address {
-    margin: 0 auto;
-  }
+  margin-right: auto;
+  margin-left: auto;
 }
 @media screen and (min-width: 1200px) {
   .footer-address {
@@ -1546,13 +1562,6 @@ clients__link:hover .clients__icon, clients__link:focus .clients__icon {
 .footer-coords {
   margin-right: auto;
   margin-left: auto;
-  margin-left: 0;
-}
-@media screen and (min-width: 480px) {
-  .footer-coords {
-    margin-right: auto;
-    margin-left: auto;
-  }
 }
 @media screen and (min-width: 1200px) {
   .footer-coords {
@@ -1564,14 +1573,6 @@ clients__link:hover .clients__icon, clients__link:focus .clients__icon {
   margin-right: auto;
   margin-left: auto;
   margin-bottom: 60px;
-  margin: 0;
-}
-@media screen and (min-width: 480px) {
-  .footer-contacts__list {
-    margin-right: auto;
-    margin-left: auto;
-    margin-bottom: 60px;
-  }
 }
 @media screen and (min-width: 1200px) {
   .footer-contacts__list {
@@ -1581,12 +1582,6 @@ clients__link:hover .clients__icon, clients__link:focus .clients__icon {
 .footer-contacts__item {
   margin-top: 9px;
   text-align: center;
-  text-align: left;
-}
-@media screen and (min-width: 480px) {
-  .footer-contacts__item {
-    text-align: center;
-  }
 }
 @media screen and (min-width: 1200px) {
   .footer-contacts__item {
@@ -1612,20 +1607,10 @@ clients__link:hover .clients__icon, clients__link:focus .clients__icon {
           flex-direction: column;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  width: 276px;
   margin-bottom: 60px;
   margin-right: auto;
   margin-left: auto;
-  width: 206px;
-  margin: 0 0 0 70px;
-}
-@media screen and (min-width: 480px) {
-  .footer-socials {
-    width: 276px;
-    margin-bottom: 60px;
-    margin-right: auto;
-    margin-left: auto;
-  }
+  width: 276px;
 }
 @media screen and (min-width: 1200px) {
   .footer-socials {
@@ -1642,8 +1627,6 @@ clients__link:hover .clients__icon, clients__link:focus .clients__icon {
 .subscribe__footer {
   margin-left: auto;
   margin-right: auto;
-  margin-left: 93px;
-  margin-right: 0;
 }
 @media screen and (min-width: 480px) {
   .subscribe__footer {
@@ -1668,19 +1651,6 @@ clients__link:hover .clients__icon, clients__link:focus .clients__icon {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-direction: row;
-      flex-direction: row;
-}
-@media screen and (min-width: 480px) {
-  .subscribe__items {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
 }
 @media screen and (min-width: 1200px) {
   .subscribe__items {
@@ -1694,24 +1664,14 @@ clients__link:hover .clients__icon, clients__link:focus .clients__icon {
   height: 50px;
   padding: 15px 16px;
   border-radius: 4px;
+  margin-right: 0;
+  margin-bottom: 20px;
+  width: 450px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   outline: transparent;
   background: rgba(33, 150, 243, 0);
   -webkit-transition: outline 250ms var(--timing-function);
   transition: outline 250ms var(--timing-function);
-  margin-right: 0;
-  margin-bottom: 20px;
-  width: 450px;
-  margin-bottom: 0;
-  margin-right: 12px;
-  width: 358px;
-}
-@media screen and (min-width: 480px) {
-  .subscribe__input {
-    margin-right: 0;
-    margin-bottom: 20px;
-    width: 450px;
-  }
 }
 @media screen and (min-width: 1200px) {
   .subscribe__input {

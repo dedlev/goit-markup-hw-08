@@ -21,13 +21,10 @@
 .logo__footer {
   display: inline-block;
   margin-bottom: 20px;
+  margin-right: auto;
+  margin-left: auto;
 
-  @include mq(mobile) {
-    margin-right: auto;
-    margin-left: auto;
-  }
-
-  @include mq(desctop) {
+  @media screen and (min-width: 1200px) {
     margin-left: 0;
     margin-right: 0;
   }

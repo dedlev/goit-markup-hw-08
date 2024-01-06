@@ -343,10 +343,15 @@
             <li class="team__member">
               <img
                 class="team__image"
-                src="./images/team/teammember-1.jpg"
+                srcset="
+                  ./images/team/team-1_sm.jpg    1x,
+                  ./images/team/team-1_sm@2x.jpg 2x
+                "
+                src="./images/team/team-1_sm.jpg"
                 alt="Ігор Дем'яненко-Product Designer"
-                width="270"
-                height="260"
+                width="450"
+                height="460"
+                loading="lazy"
               />
               <div class="member__group">
                 <h3 class="member__title">Ігор Дем'яненко</h3>
@@ -407,11 +412,10 @@
                 </ul>
               </div>
             </li>
-            <li class="team__member">
-              <!-- <li class="team__member grid-item"> -->
-              <img
+            <!-- <li class="team__member">
+                            <img
                 class="team__image"
-                src="./images/team/teammember-2.jpg"
+                src="./images/team/team-2.jpg"
                 alt="Ольга Рєпіна-Frontend Developer"
                 width="270"
                 height="260"
@@ -476,8 +480,7 @@
               </div>
             </li>
             <li class="team__member">
-              <!-- <li class="team__member grid-item"> -->
-              <img
+                           <img
                 class="team__image"
                 src="./images/team/teammember-3.jpg"
                 alt="Микола Тарасов-Marketing"
@@ -543,8 +546,7 @@
                 </ul>
               </div>
             </li>
-            <!-- <li class="team__member grid-item"> -->
-            <li class="team__member">
+                       <li class="team__member">
               <img
                 class="team__image"
                 src="./images/team/teammember-4.jpg"
@@ -610,7 +612,7 @@
                   </li>
                 </ul>
               </div>
-            </li>
+            </li> -->
           </ul>
         </div>
       </section>
