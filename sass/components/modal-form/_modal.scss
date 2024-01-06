@@ -39,7 +39,7 @@
 
   @media screen and (min-width: 480px) {
     position: absolute;
-    top: 123px;
+    top: 145px;
     left: 50%;
     width: 100%;
     max-width: 450px;
@@ -48,7 +48,7 @@
   }
 
   @media screen and (min-width: 768px) {
-    top: 243px;
+    top: 293px;
   }
 
   @media screen and (min-width: 1200px) {
@@ -72,7 +72,8 @@
 
   transition: fill 250ms var(--timing-function);
 
-  &:hover {
+  &:hover,
+  &:focus {
     fill: var(--accent-color);
   }
 }

@@ -171,6 +171,9 @@ p {
     display: none;
   }
 }
+.menu-button:hover, .menu-button:focus {
+  fill: var(--accent-color);
+}
 
 .menu-button .icon-cross {
   display: none;
@@ -768,7 +771,7 @@ p {
 @media screen and (min-width: 480px) {
   .modal {
     position: absolute;
-    top: 123px;
+    top: 145px;
     left: 50%;
     width: 100%;
     max-width: 450px;
@@ -778,7 +781,7 @@ p {
 }
 @media screen and (min-width: 768px) {
   .modal {
-    top: 243px;
+    top: 293px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -803,7 +806,7 @@ p {
   -webkit-transition: fill 250ms var(--timing-function);
   transition: fill 250ms var(--timing-function);
 }
-.modal-btn__icon:hover {
+.modal-btn__icon:hover, .modal-btn__icon:focus {
   fill: var(--accent-color);
 }
 
@@ -1387,7 +1390,6 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 170px;
   height: 92px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -1402,6 +1404,21 @@ p {
 }
 .clients__link:hover, .clients__link:focus {
   border-color: var(--accent-color);
+}
+@media screen and (max-width: 767px) {
+  .clients__link {
+    max-width: 210px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .clients__link {
+    width: 226px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .clients__link {
+    width: 170px;
+  }
 }
 
 .clients__icon {

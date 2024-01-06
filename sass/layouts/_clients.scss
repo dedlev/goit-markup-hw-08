@@ -39,14 +39,13 @@
 
   @include mq(desctop) {
     flex-basis: calc((100% - 180px) / 6);
-    // margin-bottom: 0;
     margin: 15px 15px 0;
   }
 }
 
 .clients__link {
   display: flex;
-  width: 170px;
+
   height: 92px;
   justify-content: center;
   align-items: center;
@@ -58,6 +57,18 @@
   &:hover,
   &:focus {
     border-color: var(--accent-color);
+  }
+
+  @media screen and (max-width: 767px) {
+    max-width: 210px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 226px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 170px;
   }
 }
 
