@@ -2,13 +2,10 @@
 
 .team {
   background-color: #f5f4fa;
+  padding-top: 60px;
+  padding-bottom: 60px;
 
-  @include mq(mobile) {
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
-
-  @include mq(desctop) {
+  @media screen and (min-width: 1200px) {
     padding-top: 94px;
     padding-bottom: 94px;
   }
@@ -23,15 +20,15 @@
 .team__member {
   margin: 15px;
 
-  @include mq(mobile) {
+  @media screen and (min-width: 480px) {
     flex-basis: calc((100% - 30px) / 1);
   }
 
-  @include mq(tablet) {
+  @media screen and (min-width: 768px) {
     flex-basis: calc((100% - 60px) / 2);
   }
 
-  @include mq(desctop) {
+  @media screen and (min-width: 1200px) {
     flex-basis: calc((100% - 120px) / 4);
   }
 
@@ -46,11 +43,11 @@
   &__group {
     padding-top: 30px;
 
-    @include mq(tablet) {
+    @media screen and (min-width: 768px) {
       padding-bottom: 24px;
     }
 
-    @include mq(desctop) {
+    @media screen and (min-width: 1200px) {
       padding-bottom: 30px;
     }
   }

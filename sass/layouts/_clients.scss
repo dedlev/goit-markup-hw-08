@@ -3,32 +3,21 @@
 .clients-list {
   display: flex;
   flex-wrap: wrap;
-  margin: -15px;
-
-  // @include mq(mobile) {
-  //   margin: -15px;
-  // }
-
-  // @include mq(tablet) {
-  //   margin: -15px;
-  // }
-
-  // @include mq(desctop) {
-  //   margin: -15px;
-  // }
+  margin: -15px -15px 0;
 }
 
 .clients__item {
-  @include mq(mobile) {
+  margin: 15px;
+
+  @media screen and (min-width: 320px) {
     flex-basis: calc((100% - 60px) / 2);
-    margin-bottom: 30px;
 
     &:nth-last-child(-n + 2) {
       margin-bottom: 0;
     }
   }
 
-  @include mq(tablet) {
+  @media screen and (min-width: 768px) {
     flex-basis: calc((100% - 90px) / 3);
     margin: 15px;
 
@@ -37,7 +26,7 @@
     }
   }
 
-  @include mq(desctop) {
+  @media screen and (min-width: 1200px) {
     flex-basis: calc((100% - 180px) / 6);
     margin: 15px 15px 0;
   }

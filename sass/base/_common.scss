@@ -12,18 +12,16 @@ body {
 /* section */
 
 .section {
-  @include mq(mobile) {
-    margin-top: 60px;
-    margin-bottom: 60px;
-  }
+  margin-top: 60px;
+  margin-bottom: 60px;
 
-  @include mq(desctop) {
+  @media screen and (min-width: 1200px) {
     margin-top: 94px;
     margin-bottom: 94px;
   }
 
   &__title {
-    @include mq(mobile) {
+    @media screen and (min-width: 480px) {
       margin-bottom: 30px;
     }
 
@@ -40,12 +38,10 @@ body {
 }
 
 .section__title--distance {
-  @include mq(mobile) {
-    // padding-top: 60px;
+  @media screen and (min-width: 480px) {
     margin-bottom: 30px;
   }
-  @include mq(desctop) {
-    // padding-top: 94px;
+  @media screen and (min-width: 1200px) {
     margin-bottom: 50px;
   }
 }

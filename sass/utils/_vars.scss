@@ -1,7 +1,9 @@
 :root {
   --main-font: 'Roboto', sans-serif;
   --secondary-font: 'Raleway', sans-serif;
+
   /* colors */
+
   --primary-text-color: #757575;
   --title-text-color: #212121;
   --accent-color: #2196f3;
@@ -12,9 +14,4 @@
   /* transition */
 
   --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
-  /* grid-items */
-
-  /* --items: 1;
-  /* --indent: 30px;  */
 }

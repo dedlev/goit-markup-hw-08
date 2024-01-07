@@ -1,10 +1,11 @@
 /* напрямки діяльності */
+
 .section-directions {
-  @media screen and (max-width: (1200px - 0.02)) {
+  @media screen and (max-width: 1199px) {
     display: none;
   }
 
-  @include mq(desctop) {
+  @media screen and (min-width: 1200px) {
     display: block;
   }
 }

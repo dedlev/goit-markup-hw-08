@@ -20,7 +20,7 @@
       letter-spacing: 0.36px;
     }
 
-    @include mq(desctop) {
+    @media screen and (min-width: 1200px) {
       font-size: 14px;
       line-height: 1.71;
       letter-spacing: 0.42px;
@@ -68,14 +68,3 @@
     fill: var(--accent-color);
   }
 }
-
-/* .modal-form__checkbox-vector {
-  margin-right: 7px;
-  fill: var(--title-text-color);
-
-  transition: fill 250ms var(--timing-function);
-} */
-
-/* .checkbox:focus + .checkbox-vector {
-  fill: var(--accent-color);
-} */

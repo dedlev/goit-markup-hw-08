@@ -7,27 +7,13 @@
 .nav {
   position: relative;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #ececec;
 
-  @media screen and (max-width: 1199px) {
+  @media screen and (max-width: 767px) {
     padding-top: 16px;
     padding-bottom: 16px;
-  }
-}
-
-.main-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  &__navi {
-    display: flex;
-    align-items: center;
-
-    @include mq(mobile-only) {
-      width: 450px;
-    }
   }
 }
 
@@ -44,7 +30,7 @@
     }
   }
 
-  @include mq(desctop) {
+  @media screen and (min-width: 1200px) {
     width: 284px;
   }
 
@@ -52,14 +38,6 @@
     @media screen and (min-width: 480px) and (max-width: 767px) {
       display: none;
     }
-  }
-
-  @media screen and (min-width: 768px) {
-    margin-left: 88px;
-  }
-
-  @media screen and (min-width: 1200px) {
-    margin-left: 93px;
   }
 }
 
