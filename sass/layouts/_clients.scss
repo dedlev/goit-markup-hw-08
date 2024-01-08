@@ -8,13 +8,10 @@
 
 .clients__item {
   margin: 15px;
+  flex-basis: calc((100% - 60px) / 2);
 
-  @media screen and (min-width: 320px) {
-    flex-basis: calc((100% - 60px) / 2);
-
-    &:nth-last-child(-n + 2) {
-      margin-bottom: 0;
-    }
+  &:nth-last-child(-n + 2) {
+    margin-bottom: 0;
   }
 
   @media screen and (min-width: 768px) {
@@ -66,8 +63,8 @@
 
   transition: fill 250ms var(--timing-function);
 
-  clients__link:hover &,
-  clients__link:focus & {
+  .clients__link:hover &,
+  .clients__link:focus & {
     fill: var(--accent-color);
   }
 }

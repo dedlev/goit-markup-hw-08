@@ -5,10 +5,9 @@
   color: var(--primary-white-color);
 
   &__container {
-    @media screen and (max-width: 1199px) {
-      padding-top: 118px;
-      padding-bottom: 118px;
-    }
+    padding-top: 118px;
+    padding-bottom: 118px;
+
     @media screen and (min-width: 1200px) {
       padding-top: 200px;
       padding-bottom: 200px;
@@ -16,23 +15,18 @@
   }
 
   &__title {
-    @media screen and (max-width: 1199px) {
-      width: 360px;
-      margin-top: 0;
-      margin-bottom: 30px;
-      margin-left: auto;
-      margin-right: auto;
-      font-size: 26px;
-      font-weight: 900;
-      line-height: 1.61;
-      letter-spacing: 1.56px;
-    }
+    width: 360px;
+    margin-top: 0;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 26px;
+    font-weight: 900;
+    line-height: 1.61;
+    letter-spacing: 1.56px;
 
     @media screen and (min-width: 1200px) {
       width: 696px;
-      margin-bottom: 30px;
-      margin-left: auto;
-      margin-right: auto;
       font-size: 44px;
       line-height: 1.36;
       letter-spacing: 2.64px;

@@ -16,6 +16,8 @@
   </head>
 
   <body>
+    <!-- Панель навігації -->
+
     <header class="page-header">
       <div class="container">
         <nav class="nav">
@@ -70,7 +72,11 @@
                   <a
                     class="contacts__link contacts__link--size link"
                     href="mailto:info@devstudio.com"
-                    ><svg class="contacts__icon" width="16" height="12">
+                    ><svg
+                      class="contacts__icon contacts__icon--mail"
+                      width="16"
+                      height="12"
+                    >
                       <use href="./images/icons.svg#envelope"></use>
                     </svg>
                     info@devstudio.com</a
@@ -78,7 +84,11 @@
                 </li>
                 <li class="contacts__item">
                   <a class="contacts__link link" href="tel:+38-096-111-11-11"
-                    ><svg class="contacts__icon" width="10" height="16">
+                    ><svg
+                      class="contacts__icon contacts__icon--tel"
+                      width="10"
+                      height="16"
+                    >
                       <use href="./images/icons.svg#smartphone"></use>
                     </svg>
                     +38 096 111 11 11</a
@@ -108,11 +118,12 @@
       </div>
     </header>
 
+    <!--  Сторінка портфоліо  -->
+
     <main>
       <section class="portfolio section">
         <div class="container">
           <h1 class="visually-hidden">Напрямки діяльності</h1>
-          <!--скриється css-->
           <ul class="portfolio-btn__list list">
             <li class="portfolio-btn__item item">
               <button
@@ -135,9 +146,7 @@
               <button type="button" class="portfolio-btn">Маркетинг</button>
             </li>
           </ul>
-          <!-- <ul class="list grid"> -->
           <ul class="card card__portfolio list">
-            <!-- <li class="card__item grid-item"> -->
             <li class="card__item item">
               <a class="card__link link" href="">
                 <div class="card__img-wrapper">
@@ -186,7 +195,6 @@
                 </div>
               </a>
             </li>
-            <!-- <li class="card__item grid-item"> -->
             <li class="card__item item">
               <a class="card__link link" href="">
                 <div class="card__img-wrapper">
@@ -234,7 +242,6 @@
                 </div>
               </a>
             </li>
-            <!-- <li class="card__item grid-item"> -->
             <li class="card__item item">
               <a class="card__link link" href="">
                 <div class="card__img-wrapper">
@@ -282,7 +289,6 @@
                 </div>
               </a>
             </li>
-            <!-- <li class="card__item grid-item"> -->
             <li class="card__item item">
               <a class="card__link link" href="">
                 <div class="card__img-wrapper">
@@ -330,7 +336,6 @@
                 </div>
               </a>
             </li>
-            <!-- <li class="card__item grid-item"> -->
             <li class="card__item item">
               <a class="card__link link" href="">
                 <div class="card__img-wrapper">
@@ -378,7 +383,6 @@
                 </div>
               </a>
             </li>
-            <!-- <li class="card__item grid-item"> -->
             <li class="card__item item">
               <a class="card__link link" href="">
                 <div class="card__img-wrapper">
@@ -426,7 +430,6 @@
                 </div>
               </a>
             </li>
-            <!-- <li class="card__item grid-item"> -->
             <li class="card__item item">
               <a class="card__link link" href="">
                 <div class="card__img-wrapper">
@@ -474,7 +477,6 @@
                 </div>
               </a>
             </li>
-            <!-- <li class="card__item grid-item"> -->
             <li class="card__item item">
               <a class="card__link link" href="">
                 <div class="card__img-wrapper">
@@ -522,7 +524,6 @@
                 </div>
               </a>
             </li>
-            <!-- <li class="card__item grid-item"> -->
             <li class="card__item item">
               <a class="card__link link" href="">
                 <div class="card__img-wrapper">
@@ -575,85 +576,91 @@
         </div>
       </section>
     </main>
+
     <!-- footer -->
+
     <footer class="footer">
       <div class="footer-container container">
-        <div class="footer-address">
-          <a href="./index.html" class="logo logo__footer"
-            >Web<span class="logo__text logo__text--white">Studio</span></a
-          >
-          <span class="footer-coords">м. Київ, пр-т Лесі Українки, 26</span>
-          <ul class="footer-contacts__list list">
-            <li class="footer-contacts__item">
-              <a
-                class="footer-contacts__link link"
-                href="mailto:info@devstudio.com"
-                >info@devstudio.com</a
-              >
-            </li>
-            <li class="footer-contacts__item">
-              <a class="footer-contacts__link link" href="tel:+38-096-111-11-11"
-                >+38 096 111 11 11</a
-              >
-            </li>
-          </ul>
-        </div>
-        <div class="footer-socials">
-          <b class="footer__title">приєднуйтесь</b>
-          <ul class="socials list">
-            <li class="socials__item">
-              <a
-                class="socials__link socials__link--bottom link"
-                href=""
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="іконка instagram"
-              >
-                <svg class="socials__icon" width="20" height="20">
-                  <use href="./images/icons.svg#instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="socials__item">
-              <a
-                class="socials__link socials__link--bottom link"
-                href=""
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="іконка twitter"
-              >
-                <svg class="socials__icon" width="20" height="20">
-                  <use href="./images/icons.svg#twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="socials__item">
-              <a
-                class="socials__link socials__link--bottom link"
-                href=""
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="іконка Facebook"
-              >
-                <svg class="socials__icon" width="20" height="20">
-                  <use href="./images/icons.svg#facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="socials__item">
-              <a
-                class="socials__link socials__link--bottom link"
-                href=""
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="іконка linkedin"
-              >
-                <svg class="socials__icon" width="20" height="20">
-                  <use href="./images/icons.svg#linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
+        <div class="footer-base">
+          <div class="footer-address">
+            <a href="./index.html" class="logo logo__footer"
+              >Web<span class="logo__text logo__text--white">Studio</span></a
+            >
+            <span class="footer-coords">м. Київ, пр-т Лесі Українки, 26</span>
+            <ul class="footer-contacts__list list">
+              <li class="footer-contacts__item">
+                <a
+                  class="footer-contacts__link link"
+                  href="mailto:info@devstudio.com"
+                  >info@devstudio.com</a
+                >
+              </li>
+              <li class="footer-contacts__item">
+                <a
+                  class="footer-contacts__link link"
+                  href="tel:+38-096-111-11-11"
+                  >+38 096 111 11 11</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="footer-socials">
+            <b class="footer__title">приєднуйтесь</b>
+            <ul class="socials list">
+              <li class="socials__item">
+                <a
+                  class="socials__link socials__link--bottom link"
+                  href=""
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="іконка instagram"
+                >
+                  <svg class="socials__icon" width="20" height="20">
+                    <use href="./images/icons.svg#instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="socials__item">
+                <a
+                  class="socials__link socials__link--bottom link"
+                  href=""
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="іконка twitter"
+                >
+                  <svg class="socials__icon" width="20" height="20">
+                    <use href="./images/icons.svg#twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="socials__item">
+                <a
+                  class="socials__link socials__link--bottom link"
+                  href=""
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="іконка Facebook"
+                >
+                  <svg class="socials__icon" width="20" height="20">
+                    <use href="./images/icons.svg#facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="socials__item">
+                <a
+                  class="socials__link socials__link--bottom link"
+                  href=""
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="іконка linkedin"
+                >
+                  <svg class="socials__icon" width="20" height="20">
+                    <use href="./images/icons.svg#linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
         <form class="subscribe subscribe__footer">
           <b class="footer__title">Підпишіться на розсилку</b>

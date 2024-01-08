@@ -90,15 +90,15 @@
 
   &__list {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-wrap: wrap;
+    width: 400px;
+    justify-content: start;
     margin-bottom: 50px;
 
-    @media screen and (max-width: 767px) {
-      display: flex;
-      flex-wrap: wrap;
-      max-width: 328px;
-      justify-content: start;
+    @media screen and (min-width: 768px) {
+      width: 100%;
+      flex-wrap: nowrap;
+      justify-content: center;
     }
   }
 }

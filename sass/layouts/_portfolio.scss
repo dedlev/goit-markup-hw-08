@@ -11,9 +11,7 @@
   &__item {
     display: flex;
 
-    @media screen and (max-width: 767px) {
-      flex-basis: calc(100% / 1);
-    }
+    flex-basis: calc(100% / 1);
 
     @media screen and (min-width: 768px) {
       flex-basis: calc((100% - 60px) / 2);
@@ -40,9 +38,7 @@
 
     background-color: var(--primary-white-color);
 
-    @media screen and (min-width: 768px) {
-      width: 354px;
-    }
+    width: 354px;
 
     @media screen and (min-width: 1200px) {
       width: 370px;
