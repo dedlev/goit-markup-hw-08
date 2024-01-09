@@ -25,6 +25,10 @@
     line-height: 1.61;
     letter-spacing: 1.56px;
 
+    @media screen and (max-width: 390px) {
+      width: 300px;
+    }
+
     @media screen and (min-width: 1200px) {
       width: 696px;
       font-size: 44px;

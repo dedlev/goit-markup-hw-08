@@ -24,8 +24,24 @@
           <a href="./index.html" class="logo"
             >Web<span class="logo__text logo__text--black">Studio</span></a
           >
-
-          <div class="menu-container" id="menu-container" data-menu>
+          <button
+            class="menu-toggle js-open-menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <svg
+              class="menu-icon"
+              width="40"
+              height="40"
+              aria-label="Перемикач мобільного меню"
+            >
+              <use
+                class="icon-cross"
+                href="./images/icons.svg#icon-menu_40px"
+              ></use>
+            </svg>
+          </button>
+          <div class="menu" id="menu-container" data-menu>
             <div class="navigation">
               <ul class="site-nav list">
                 <li class="site-nav__item">
@@ -73,7 +89,7 @@
                 </li>
               </ul>
 
-              <div class="menu-socials">
+              <!-- <div class="menu-socials">
                 <ul class="menu-socials__list list">
                   <li class="menu-socials__item item">
                     <a href="" class="link"></a>Instagram
@@ -88,34 +104,11 @@
                     <a href="" class="link"></a>LinkedIn
                   </li>
                 </ul>
-              </div>
+              </div> -->
             </div>
           </div>
         </nav>
       </div>
-
-      <!-- batton mobile-menu -->
-
-      <span
-        role="button"
-        class="menu-button"
-        aria-expanded="false"
-        aria-controls="menu-container"
-        data-menu-button
-      >
-        <svg
-          class="menu-icon"
-          width="40"
-          height="40"
-          aria-label="Перемикач мобільного меню"
-        >
-          <use
-            class="icon-cross"
-            href="./images/icons.svg#icon-close_40px"
-          ></use>
-          <use class="icon-menu" href="./images/icons.svg#icon-menu_40px"></use>
-        </svg>
-      </span>
     </header>
 
     <!-- Головна сторінка -->
@@ -784,6 +777,86 @@
       </section>
     </main>
 
+    <!-- Випадаюче меню -->
+
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle menu-toggle-close js-close-menu">
+        <svg
+          class="menu-icon"
+          width="40"
+          height="40"
+          aria-label="Перемикач мобільного меню"
+        >
+          <use
+            class="icon-cross"
+            href="./images/icons.svg#icon-close_40px"
+          ></use>
+        </svg>
+      </button>
+      <div class="navigation">
+        <ul class="site-nav list">
+          <li class="site-nav__item">
+            <a class="site-nav__link site-nav__link--current link" href=""
+              >Студія</a
+            >
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link link" href="./portfolio.html">Портфоліо</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link link" href="">Контакти</a>
+          </li>
+        </ul>
+      </div>
+      <div class="navigation__contacts">
+        <ul class="contacts list">
+          <li class="contacts__item">
+            <a
+              class="contacts__link contacts__link--size link"
+              href="mailto:info@devstudio.com"
+              ><svg
+                class="contacts__icon contacts__icon--mail"
+                width="16"
+                height="12"
+              >
+                <use href="./images/icons.svg#envelope"></use>
+              </svg>
+              info@devstudio.com</a
+            >
+          </li>
+          <li class="contacts__item">
+            <a class="contacts__link link" href="tel:+38-096-111-11-11"
+              ><svg
+                class="contacts__icon contacts__icon--tel"
+                width="10"
+                height="16"
+              >
+                <use href="./images/icons.svg#smartphone"></use>
+              </svg>
+              +38 096 111 11 11</a
+            >
+          </li>
+        </ul>
+
+        <div class="menu-socials">
+          <ul class="menu-socials__list list">
+            <li class="menu-socials__item item">
+              <a href="" class="link"></a>Instagram
+            </li>
+            <li class="menu-socials__item item">
+              <a href="" class="link"></a>Twitter
+            </li>
+            <li class="menu-socials__item item">
+              <a href="" class="link"></a>Facebook
+            </li>
+            <li class="menu-socials__item item">
+              <a href="" class="link"></a>LinkedIn
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
     <!-- footer -->
 
     <footer class="footer">
@@ -889,7 +962,14 @@
         </form>
       </div>
     </footer>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
-    <script src="./js/menu.js"></script>
+    <!-- <script src="./js/menu.js"></script> -->
   </body>
 </html>

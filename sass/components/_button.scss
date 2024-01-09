@@ -8,16 +8,11 @@
     var(--accent-color),
     0px 4px 4px 0px rgba(0, 0, 0, 0.15)
   );
-  transition: background-color 250ms var(--timing-function),
-    color 250ms var(--timing-function);
+  transition: background-color 250ms var(--timing-function);
 
   &:hover,
   &:focus {
-    @include colors(
-      #2f303a,
-      var(--primary-white-color),
-      0px 4px 4px 0px rgba(0, 0, 0, 0.15)
-    );
+    background-color: #188ce8;
   }
 }
 

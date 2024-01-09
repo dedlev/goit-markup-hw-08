@@ -4,17 +4,23 @@
   &__portfolio {
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
+    margin: -15px;
     flex-grow: 1;
   }
 
   &__item {
+    margin: 15px;
     display: flex;
+    flex-wrap: wrap;
 
-    flex-basis: calc(100% / 1);
+    flex-basis: calc((100% - 30px) / 1);
 
     @media screen and (min-width: 768px) {
       flex-basis: calc((100% - 60px) / 2);
+    }
+
+    @media screen and (min-width: 1200px) {
+      flex-basis: calc((100% - 90px) / 3);
     }
 
     @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -23,10 +29,6 @@
           flex-grow: 1;
         }
       }
-    }
-
-    @media screen and (min-width: 1200px) {
-      flex-basis: calc((100% - 90px) / 3);
     }
   }
 
@@ -38,7 +40,11 @@
 
     background-color: var(--primary-white-color);
 
-    width: 354px;
+    max-width: 450px;
+
+    @media screen and (min-width: 768px) {
+      width: 354px;
+    }
 
     @media screen and (min-width: 1200px) {
       width: 370px;
