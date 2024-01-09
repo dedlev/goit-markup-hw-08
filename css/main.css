@@ -1648,7 +1648,7 @@ p {
   -webkit-transition: outline 250ms var(--timing-function);
   transition: outline 250ms var(--timing-function);
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 480px) {
   .subscribe__input {
     width: 280px;
   }
