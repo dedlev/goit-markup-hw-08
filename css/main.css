@@ -1029,6 +1029,7 @@ p {
   background-color: #c4c4c4;
   background-image: url(../images/hero/hero_sm.jpg), -webkit-gradient(linear, left top, left bottom, from(var(--hero-bg-color)), to(var(--hero-bg-color)));
   background-image: url(../images/hero/hero_sm.jpg), linear-gradient(var(--hero-bg-color), var(--hero-bg-color));
+  background-size: cover;
   background-position: center;
 }
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {

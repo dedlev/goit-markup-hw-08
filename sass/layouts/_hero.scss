@@ -52,6 +52,7 @@
 
   background-image: url(../images/hero/hero_sm.jpg),
     linear-gradient(var(--hero-bg-color), var(--hero-bg-color));
+  background-size: cover;
 
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
