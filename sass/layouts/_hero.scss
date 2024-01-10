@@ -50,39 +50,55 @@
   margin-right: auto;
   background-color: #c4c4c4;
 
-  background-image: url(../images/hero/hero_sm.jpg),
-    linear-gradient(var(--hero-bg-color), var(--hero-bg-color));
+  background-image: linear-gradient(var(--hero-bg-color), var(--hero-bg-color)),
+    url(../images/hero/hero_sm.jpg);
+
   background-size: cover;
 
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
-    background-image: url(../images/hero/hero_sm@2x.jpg),
-      linear-gradient(var(--hero-bg-color), var(--hero-bg-color));
+    background-image: linear-gradient(
+        var(--hero-bg-color),
+        var(--hero-bg-color)
+      ),
+      url(../images/hero/hero_sm@2x.jpg);
   }
 
   @media screen and (min-width: 768px) {
-    background-image: url(../images/hero/hero_md.jpg),
-      linear-gradient(var(--hero-bg-color), var(--hero-bg-color));
+    background-image: linear-gradient(
+        var(--hero-bg-color),
+        var(--hero-bg-color)
+      ),
+      url(../images/hero/hero_md.jpg);
 
     @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
-      background-image: url(../images/hero/hero_md@2x.jpg),
-        linear-gradient(var(--hero-bg-color), var(--hero-bg-color));
+      background-image: linear-gradient(
+          var(--hero-bg-color),
+          var(--hero-bg-color)
+        ),
+        url(../images/hero/hero_md@2x.jpg);
     }
   }
 
   @media screen and (min-width: 1200px) {
     height: 600px;
-    background-image: url(../images/hero/hero_lg.jpg),
-      linear-gradient(var(--hero-bg-color), var(--hero-bg-color));
+    background-image: linear-gradient(
+        var(--hero-bg-color),
+        var(--hero-bg-color)
+      ),
+      url(../images/hero/hero_lg.jpg);
 
     @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
-      background-image: url(../images/hero/hero_lg@2x.jpg),
-        linear-gradient(var(--hero-bg-color), var(--hero-bg-color));
+      background-image: linear-gradient(
+          var(--hero-bg-color),
+          var(--hero-bg-color)
+        ),
+        url(../images/hero/hero_lg@2x.jpg);
     }
   }
 

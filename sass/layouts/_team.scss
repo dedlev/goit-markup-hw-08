@@ -1,7 +1,10 @@
 /* команда */
 
-.team {
+.section-team {
   background-color: #f5f4fa;
+}
+
+.team {
   padding-top: 60px;
   padding-bottom: 60px;
 
@@ -39,10 +42,7 @@
 .member {
   &__group {
     padding-top: 30px;
-
-    @media screen and (min-width: 768px) {
-      padding-bottom: 24px;
-    }
+    padding-bottom: 24px;
 
     @media screen and (min-width: 1200px) {
       padding-bottom: 30px;

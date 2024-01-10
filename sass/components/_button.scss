@@ -8,6 +8,7 @@
     var(--accent-color),
     0px 4px 4px 0px rgba(0, 0, 0, 0.15)
   );
+
   transition: background-color 250ms var(--timing-function);
 
   &:hover,
@@ -70,6 +71,10 @@
     background-color 250ms var(--timing-function),
     box-shadow 250ms var(--timing-function);
 
+  @media screen and (max-width: 360px) {
+    padding: 6px 14px;
+  }
+
   &:hover,
   &:focus {
     @include colors(
@@ -86,9 +91,13 @@
   &__list {
     display: flex;
     flex-wrap: wrap;
-    width: 400px;
+    width: 340px;
     justify-content: start;
     margin-bottom: 50px;
+
+    @media screen and (max-width: 360px) {
+      width: 320px;
+    }
 
     @media screen and (min-width: 768px) {
       width: 100%;
@@ -116,6 +125,7 @@
 
 .portfolio-btn--current {
   padding: 6px 25px;
+
   @include colors(
     var(--primary-white-color),
     var(--accent-color),
@@ -125,4 +135,8 @@
       0px 3px 1px 0px rgba(0, 0, 0, 0.1)
     )
   );
+
+  @media screen and (max-width: 360px) {
+    padding: 6px 18px;
+  }
 }

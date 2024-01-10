@@ -281,6 +281,7 @@ p {
 /* page-header */
 .page-header {
   position: relative;
+  border-bottom: 1px solid #ececec;
 }
 
 .nav {
@@ -294,7 +295,6 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-bottom: 1px solid #ececec;
 }
 @media screen and (max-width: 767px) {
   .nav {
@@ -583,6 +583,11 @@ p {
   transition: color 250ms var(--timing-function), background-color 250ms var(--timing-function), box-shadow 250ms var(--timing-function);
   transition: color 250ms var(--timing-function), background-color 250ms var(--timing-function), box-shadow 250ms var(--timing-function), -webkit-box-shadow 250ms var(--timing-function);
 }
+@media screen and (max-width: 360px) {
+  .portfolio-btn {
+    padding: 6px 14px;
+  }
+}
 .portfolio-btn:hover, .portfolio-btn:focus {
   color: var(--primary-white-color);
   background-color: var(--accent-color);
@@ -595,11 +600,16 @@ p {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  width: 400px;
+  width: 340px;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: start;
   margin-bottom: 50px;
+}
+@media screen and (max-width: 360px) {
+  .portfolio-btn__list {
+    width: 320px;
+  }
 }
 @media screen and (min-width: 768px) {
   .portfolio-btn__list {
@@ -630,6 +640,11 @@ p {
   background-color: var(--accent-color);
   -webkit-box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12), 0px 1px 2px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12), 0px 1px 2px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
+}
+@media screen and (max-width: 360px) {
+  .portfolio-btn--current {
+    padding: 6px 18px;
+  }
 }
 
 /* social icons */
@@ -964,6 +979,7 @@ p {
 
 .modal-form__heckbox-custom {
   margin-right: 7px;
+  min-width: 16px;
   width: 16px;
   height: 15px;
   border: 2px solid var(--title-text-color);
@@ -1038,40 +1054,40 @@ p {
   margin-left: auto;
   margin-right: auto;
   background-color: #c4c4c4;
-  background-image: url(../images/hero/hero_sm.jpg), -webkit-gradient(linear, left top, left bottom, from(var(--hero-bg-color)), to(var(--hero-bg-color)));
-  background-image: url(../images/hero/hero_sm.jpg), linear-gradient(var(--hero-bg-color), var(--hero-bg-color));
+  background-image: -webkit-gradient(linear, left top, left bottom, from(var(--hero-bg-color)), to(var(--hero-bg-color))), url(../images/hero/hero_sm.jpg);
+  background-image: linear-gradient(var(--hero-bg-color), var(--hero-bg-color)), url(../images/hero/hero_sm.jpg);
   background-size: cover;
   background-position: center;
 }
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .overlay {
-    background-image: url(../images/hero/hero_sm@2x.jpg), -webkit-gradient(linear, left top, left bottom, from(var(--hero-bg-color)), to(var(--hero-bg-color)));
-    background-image: url(../images/hero/hero_sm@2x.jpg), linear-gradient(var(--hero-bg-color), var(--hero-bg-color));
+    background-image: -webkit-gradient(linear, left top, left bottom, from(var(--hero-bg-color)), to(var(--hero-bg-color))), url(../images/hero/hero_sm@2x.jpg);
+    background-image: linear-gradient(var(--hero-bg-color), var(--hero-bg-color)), url(../images/hero/hero_sm@2x.jpg);
   }
 }
 @media screen and (min-width: 768px) {
   .overlay {
-    background-image: url(../images/hero/hero_md.jpg), -webkit-gradient(linear, left top, left bottom, from(var(--hero-bg-color)), to(var(--hero-bg-color)));
-    background-image: url(../images/hero/hero_md.jpg), linear-gradient(var(--hero-bg-color), var(--hero-bg-color));
+    background-image: -webkit-gradient(linear, left top, left bottom, from(var(--hero-bg-color)), to(var(--hero-bg-color))), url(../images/hero/hero_md.jpg);
+    background-image: linear-gradient(var(--hero-bg-color), var(--hero-bg-color)), url(../images/hero/hero_md.jpg);
   }
 }
 @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
   .overlay {
-    background-image: url(../images/hero/hero_md@2x.jpg), -webkit-gradient(linear, left top, left bottom, from(var(--hero-bg-color)), to(var(--hero-bg-color)));
-    background-image: url(../images/hero/hero_md@2x.jpg), linear-gradient(var(--hero-bg-color), var(--hero-bg-color));
+    background-image: -webkit-gradient(linear, left top, left bottom, from(var(--hero-bg-color)), to(var(--hero-bg-color))), url(../images/hero/hero_md@2x.jpg);
+    background-image: linear-gradient(var(--hero-bg-color), var(--hero-bg-color)), url(../images/hero/hero_md@2x.jpg);
   }
 }
 @media screen and (min-width: 1200px) {
   .overlay {
     height: 600px;
-    background-image: url(../images/hero/hero_lg.jpg), -webkit-gradient(linear, left top, left bottom, from(var(--hero-bg-color)), to(var(--hero-bg-color)));
-    background-image: url(../images/hero/hero_lg.jpg), linear-gradient(var(--hero-bg-color), var(--hero-bg-color));
+    background-image: -webkit-gradient(linear, left top, left bottom, from(var(--hero-bg-color)), to(var(--hero-bg-color))), url(../images/hero/hero_lg.jpg);
+    background-image: linear-gradient(var(--hero-bg-color), var(--hero-bg-color)), url(../images/hero/hero_lg.jpg);
   }
 }
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .overlay {
-    background-image: url(../images/hero/hero_lg@2x.jpg), -webkit-gradient(linear, left top, left bottom, from(var(--hero-bg-color)), to(var(--hero-bg-color)));
-    background-image: url(../images/hero/hero_lg@2x.jpg), linear-gradient(var(--hero-bg-color), var(--hero-bg-color));
+    background-image: -webkit-gradient(linear, left top, left bottom, from(var(--hero-bg-color)), to(var(--hero-bg-color))), url(../images/hero/hero_lg@2x.jpg);
+    background-image: linear-gradient(var(--hero-bg-color), var(--hero-bg-color)), url(../images/hero/hero_lg@2x.jpg);
   }
 }
 
@@ -1180,8 +1196,11 @@ p {
 }
 
 /* команда */
-.team {
+.section-team {
   background-color: #f5f4fa;
+}
+
+.team {
   padding-top: 60px;
   padding-bottom: 60px;
 }
@@ -1225,11 +1244,7 @@ p {
 
 .member__group {
   padding-top: 30px;
-}
-@media screen and (min-width: 768px) {
-  .member__group {
-    padding-bottom: 24px;
-  }
+  padding-bottom: 24px;
 }
 @media screen and (min-width: 1200px) {
   .member__group {
@@ -1448,13 +1463,22 @@ p {
   transition: transform 250ms var(--timing-function);
   transition: transform 250ms var(--timing-function), -webkit-transform 250ms var(--timing-function);
 }
+@media screen and (max-width: 380px) {
+  .card-overlay {
+    height: 250px;
+  }
+}
 .card-overlay__text {
   font-size: 18px;
-  font-style: 1.2;
   font-weight: 400;
   line-height: 1.55;
   letter-spacing: 0.54px;
   color: #fff;
+}
+@media screen and (max-width: 380px) {
+  .card-overlay__text {
+    font-size: 16px;
+  }
 }
 .card__link:hover .card-overlay, .card__link:focus .card-overlay {
   -webkit-transform: translate(0);
@@ -1483,6 +1507,11 @@ p {
   text-align: center;
   text-transform: uppercase;
   color: #fff;
+}
+@media screen and (min-width: 1200px) {
+  .footer__title {
+    text-align: left;
+  }
 }
 
 .footer-container {
@@ -1518,6 +1547,9 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
 }
 @media screen and (min-width: 768px) {
   .footer-base {
