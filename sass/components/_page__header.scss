@@ -31,7 +31,9 @@
   }
 
   @media screen and (min-width: 768px) {
-    width: 284px;
+    &__item:not(:last-child) {
+      margin-right: 53px;
+    }
   }
 
   &__header {
