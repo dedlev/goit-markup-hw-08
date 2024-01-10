@@ -9,6 +9,11 @@
   text-decoration: none;
 
   color: var(--accent-color);
+
+  @media screen and (min-width: 1200px) {
+    font-size: 26px;
+    letter-spacing: 0.78px;
+  }
 }
 
 /* logo footer */
